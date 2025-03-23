@@ -1,0 +1,378 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    position: fixed;
+    top: 0; 
+    left: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    font-weight: 600;
+    z-index: 1000;
+}
+body {
+    padding-top: 80px;
+}
+
+.logo {
+    font-size: 20px;
+}
+
+.logo span {
+    color: #37d8b4;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: #37d8b4; 
+}
+
+#accueil {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 10%;
+    background-color: white;
+}
+
+#accueil h2 {
+    font-size: 24px;
+    font-weight: 600;
+    color: black;
+    max-width: 50%;
+    line-height: 1.6;
+}
+
+#accueil h2 .highlight {
+    color: #37d8b4;
+}
+
+#accueil button {
+    background-color: #37d8b4;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+#accueil img {
+        width: 300px; 
+        height: 300px; 
+        border-radius: 50%; 
+        background-color: white; 
+        border: 5px solid white; 
+        object-fit: cover; 
+        display: block;
+        margin: auto; 
+    }
+    
+#apropos {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f8f8f8;
+    padding: 60px 10%;
+}
+
+#apropos h2 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #37d8b4;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.apropos-content {
+    width: 60%;
+}
+
+.apropos-content p {
+    font-size: 14px;
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.apropos-content .highlight {
+    color: #37d8b4;
+    font-weight: 600;
+}
+
+#apropos button {
+    background-color: #37d8b4;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.apropos-image {
+    width: 35%;
+    display: flex;
+    justify-content: center;
+}
+
+.apropos-image img {
+    width: 190px;
+    height: 250px;
+    border-radius: 50%;
+    border: 4px solid #37d8b4;
+    margin: auto; 
+}
+
+#projets {
+    background-color: #f8f8f8;
+    padding: 50px 0;
+    text-align: center;
+}
+
+#projets h2 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #37d8b4;
+    margin-bottom: 30px;
+}
+
+.project-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.project {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.project p {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.project-tags {
+    font-size: 12px;
+    color: #888;
+    margin-bottom: 15px;
+}
+
+.project button {
+    background-color: #37d8b4;
+    color: white;
+    padding: 8px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+#competences {
+    background-color: #f8f8f8;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.skills {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 20px;
+}
+
+.skill-box {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.skill-box h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.skill {
+    margin-bottom: 10px;
+}
+
+.skill p {
+    font-size: 14px;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 6px;
+    background-color: #ddd;
+    border-radius: 5px;
+    position: relative;
+}
+
+.progress-bar div {
+    height: 100%;
+    background-color: #37d8b4;
+    border-radius: 5px;
+}
+
+/* Définition des niveaux de progression */
+.html { width: 90%; }
+.css { width: 80%; }
+.javascript { width: 70%; }
+.vscode { width: 60%; }
+.gestion { width: 75%; }
+.resolution { width: 65%; }
+.adaptabilite { width: 85%; }
+
+#contact {
+    background-color: black;
+    color: white;
+    padding: 50px 0;
+    text-align: center;
+}
+
+#contact h2 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+#contact p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+#contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 500px;
+    margin: auto;
+}
+
+#contact input,
+#contact textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#contact button {
+    background-color: #37d8b4;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+footer {
+    background-color: #f8f8f8;
+    color: black;
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #37d8b4;
+    color: white;
+    padding: 12px 20px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 5px;
+    transition: background 0.3s ease-in-out;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #2bb08e;
+}
+
+.accueil .btn {
+    margin-top: 20px;
+}
+
+.cv-btn:hover {
+    background-color: #2bb08e;
+}
+.cv-btn {
+    display: inline-block;
+    background-color: #37d8b4;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.cv-btn:hover {
+    background-color: #2cb89d;
+}
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+    display: block;
+}
+
+.section {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}

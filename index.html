@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Agoyi Christian</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">AGOYI  <span>Christian</span></div>
+        <nav>
+            <ul>
+                <li><a href="#accueil" class="active">Accueil</a></li>
+                <li><a href="#apropos">À propos</a></li>
+                <li><a href="#projets">Projets</a></li>
+                <li><a href="#competences">Compétences</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<section id="accueil">
+    <div>
+        <h2>Je suis <span class="highlight">Christian</span>, Développeur en devenir passionné par le web et le design !</h2>
+        <a href="#projets" class="btn">Voir mes projets</a>
+    </div>
+    <img src="illustration.jpg" alt="Illustration Développement">
+</section>
+
+<section id="apropos">
+    <div class="apropos-content">
+        <h2>À propos</h2>
+        <p>Je m'appelle <span class="highlight">AGOYI Christian</span>, passionné par la création de sites web modernes et interactifs.</p>
+        <p>Je suis actuellement en formation en <span class="highlight">développement web</span>, et je cherche à améliorer mes compétences en JavaScript, HTML et CSS.</p>
+        <p>J’adore transformer mes idées en projets concrets et expérimenter avec les nouvelles technologies.</p>
+        <a href="mon cv.pdf" class="cv-btn" download="mon CV.pdf">Télécharger mon CV</a>
+    </div>
+    <div class="apropos-image">
+        <img src="profil.jpg" alt="Photo de profil">
+    </div>
+</section>
+
+    <section id="projets">
+        <h2>Mes Projets</h2>
+           <div class="project-container">
+            <div class="project">
+                <p>Creation de mon portofolie personnel.</p>
+                <p class="project-tags">#html, #css, #js</p>
+                <button>Voir</button>
+            </div>
+            <div class="project">
+                <p>Un calculateur.</p>
+                <p class="project-tags">#html, #css, #js</p>
+                <button>Voir</button>
+            </div>
+            <div class="project">
+                <p>Un mini-jeu interactif en JavaScript qui utilise des événements DOM.</p>
+                <p class="project-tags">#html, #css, #js</p>
+                <button>Voir</button>
+            </div>
+        </div>
+    </section>
+    
+    <section id="competences">
+        <h2>Mes Compétences</h2>
+        <div class="skills">
+            <div class="skill-box">
+                <h3>Soft Skills</h3>
+                <div class="skill">
+                    <p>Gestion de projet</p>
+                    <div class="progress-bar"><div class="gestion"></div></div>
+                </div>
+                <div class="skill">
+                    <p>Résolution de problème</p>
+                    <div class="progress-bar"><div class="resolution"></div></div>
+                </div>
+                <div class="skill">
+                    <p>Adaptabilité</p>
+                    <div class="progress-bar"><div class="adaptabilite"></div></div>
+                </div>
+            </div>
+            <div class="skill-box">
+                <h3>Hard Skills</h3>
+                <div class="skill">
+                    <p>HTML</p>
+                    <div class="progress-bar"><div class="html"></div></div>
+                </div>
+                <div class="skill">
+                    <p>CSS</p>
+                    <div class="progress-bar"><div class="css"></div></div>
+                </div>
+                <div class="skill">
+                    <p>JavaScript</p>
+                    <div class="progress-bar"><div class="javascript"></div></div>
+                </div>
+                <div class="skill">
+                    <p>VS Code</p>
+                    <div class="progress-bar"><div class="vscode"></div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+<section id="contact" style="padding: 50px; background: #111; color: white; text-align: center;">
+    
+    <h2 style="font-size: 1.8em; font-weight: bold;">
+        Vous avez un <span style="color: #00d1b2;">projet en tête ?</span>
+    </h2>
+    <p>N'hésitez pas à me <span style="color: #00d1b2; font-weight: bold;">contacter</span></p>
+
+    <form action="#" method="post" style="max-width: 600px; margin: auto; background: #222; padding: 20px; 
+                                          border-radius: 10px; box-shadow: 0 0 10px rgba(0, 255, 200, 0.3);">
+        
+        <div style="display: flex; gap: 10px;">
+            <input type="text" name="prenom" placeholder="Votre prénom" required
+                   style="width: 50%; padding: 12px; border: none; border-radius: 5px; background: #333; color: white; font-size: 1em;">
+            
+            <input type="text" name="nom" placeholder="Votre nom" required
+                   style="width: 50%; padding: 12px; border: none; border-radius: 5px; background: #333; color: white; font-size: 1em;">
+        </div>
+
+        <input type="text" name="sujet" placeholder="Votre sujet" required
+               style="width: 100%; padding: 12px; margin-top: 10px; border: none; border-radius: 5px; background: #333; color: white; font-size: 1em;">
+
+        <textarea name="message" rows="5" placeholder="Écrivez votre message ici !" required
+                  style="width: 100%; padding: 12px; margin-top: 10px; border: none; border-radius: 5px; background: #333; color: white; font-size: 1em;"></textarea>
+
+        <button type="submit" style="background-color: #00d1b2; color: white; border: none; padding: 12px; 
+                                     font-size: 1em; cursor: pointer; border-radius: 5px; width: 100%; margin-top: 10px;
+                                     transition: 0.3s;">Envoyer</button>
+    </form>
+    </section>    
+
+<footer style="background: #eaeaea; padding: 15px; text-align: center; font-size: 0.9em; color: #333; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+    
+    <p>Designed by <span style="color: #00d1b2; font-weight: bold;">Christian</span> with HTML CSS JS</p>
+
+    <p>Tous droits réservés - 2025</p>
+
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
