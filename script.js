@@ -116,3 +116,66 @@ document.querySelectorAll("nav ul li a").forEach(link => {
         document.getElementById(targetId).scrollIntoView({ behavior: "smooth" });
     });
 });
+document.querySelector("form").addEventListener("submit", function(event) {
+    let email = document.getElementById("email").value;
+    let regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!regex.test(email)) {
+        alert("Veuillez entrer une adresse email valide !");
+        event.preventDefault();
+    }
+});
+document.querySelector("form").addEventListener("submit", function(event) {
+    event.preventDefault(); // Empêche l’envoi classique
+
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let message = document.getElementById("message").value;
+
+    if (name && email && message) {
+        alert("Merci " + name + ", votre message a été envoyé !");
+        this.reset(); // Efface les champs après l’envoi
+    } else {
+        alert("Veuillez remplir tous les champs !");
+    }
+});
+document.getElementById("email").addEventListener("input", function() {
+    let regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!regex.test(this.value)) {
+        this.style.border = "2px solid red";
+    } else {
+        this.style.border = "2px solid green";
+    }
+});
+// Vérifier si l'utilisateur a déjà activé le mode sombre
+if (localStorage.getItem("darkMode") === "enabled") {
+    document.body.classList.add("dark-mode");
+}
+
+// Écouter le clic sur le bouton pour activer/désactiver le mode sombre
+document.getElementById("darkModeToggle").addEventListener("click", function() {
+    document.body.classList.toggle("dark-mode");
+
+    // Sauvegarder la préférence de l'utilisateur
+    if (document.body.classList.contains("dark-mode")) {
+        localStorage.setItem("darkMode", "enabled");
+    } else {
+        localStorage.setItem("darkMode", "disabled");
+    }
+});
+
+// Configuration EmailJS
+emailjs.init("service_ekinv9v"); // Remplace "user_xxx" par ton USER ID
+
+document.getElementById("contactForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    emailjs.sendForm("service_xxx", "template_xxx", this)
+        .then(() => {
+            document.getElementById("statusMessage").innerText = "✅ Message envoyé avec succès !";
+            this.reset();
+        })
+        .catch((error) => {
+            document.getElementById("statusMessage").innerText = "❌ Erreur lors de l'envoi : " + error;
+        });
+});
