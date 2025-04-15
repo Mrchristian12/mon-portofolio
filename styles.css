@@ -22,7 +22,7 @@ header {
     z-index: 1000;
 }
 body {
-    padding-top: 80px;
+    font-size: 1rem;
 }
 
 .logo {
@@ -55,6 +55,7 @@ nav ul li a.active {
 
 #accueil {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     padding: 80px 10%;
@@ -62,10 +63,11 @@ nav ul li a.active {
 }
 
 #accueil h2 {
-    font-size: 24px;
+    font-size: 2rem;
     font-weight: 600;
     color: black;
     max-width: 50%;
+    flex: 1;
     line-height: 1.6;
 }
 
@@ -85,8 +87,8 @@ nav ul li a.active {
 }
 
 #accueil img {
-        width: 300px; 
-        height: 300px; 
+        max-width: 100%;
+        height: auto; 
         border-radius: 50%; 
         background-color: white; 
         border: 5px solid white; 
@@ -377,10 +379,35 @@ html {
     transform: translateY(0);
 }
 
-/* Responsive Design */
-@media (max-width: 600px) {
-    .container {
-        width: 95%;
-        padding: 15px;
+@media (max-width: 768px) {
+    #accueil {
+        flex-direction: column; /* Les éléments s'empilent au lieu de se répartir sur une seule ligne */
+        padding: 40px 5%;
+    }
+
+    #accueil h2 {
+        font-size: 1.8rem; /* Réduction de la taille du texte */
+        text-align: center;
+    }
+
+    #accueil img {
+        max-width: 80%; /* L'image sera plus petite sur mobile */
+        margin: 20px 0;
+    }
+}
+
+/* Pour les très petits écrans (moins de 480px de large) */
+@media (max-width: 480px) {
+    #accueil h2 {
+        font-size: 1.5rem;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+
+    .project-container {
+        flex-direction: column;
+        gap: 15px;
     }
 }
